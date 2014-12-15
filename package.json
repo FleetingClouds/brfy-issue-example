@@ -1,0 +1,25 @@
+{
+  "name": "brfy-issue-example",
+  "version": "0.0.1",
+  "description": "An example of Browserify not recognizing a module in a Browserify bundle.",
+  "author": "Fleeting Clouds",
+  "license": "https://tldrlegal.com/license/gnu-affero-general-public-license-v3-%28agpl-3.0%29#fulltext",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FleetingClouds/javascript-bdd-baby-steps"
+  },
+  "dependencies": {
+    "uniq": "^1.0.1"
+  },
+  "scripts": {
+    "clean": "rm -f public/common.js && rm -f public/beep.js && rm -f public/boop.js",
+    "clean-pkgs": "rm -fr node_modules",
+    "clean-tidy": "rm -fr *.log & find . -name \"*.*~\" -exec rm {} \\;",
+    "clean-all": "npm run clean & npm run clean-tidy & npm run clean-pkgs",
+    "brfy": "npm install && npm run brfy-common && npm run brfy-boop && npm run brfy-beep",
+    "brfy-common": "browserify -r ./robot.js > public/common.js",
+    "brfy-boop": "browserify -x ./robot.js -x uniq beep.js > public/beep.js",
+    "brfy-beep": "browserify -x ./robot.js -x uniq boop.js > public/boop.js"
+  },
+  "private": true
+}
