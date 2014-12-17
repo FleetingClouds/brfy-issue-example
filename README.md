@@ -20,14 +20,20 @@ Also look at the generated files: `public/boop.js`, `public/beep.js` and  `publi
 
 Last line of `public/boop.js` which fails:
 
+     :
+     :
      },{"./robot.js":"/robot.js","uniq":"uniq"}]},{},[1]);
 
 Last line of `public/beep.js` which succeeds:
 
+     :
+     :
      },{"./robot.js":"/robot.js"}]},{},[1]);
 
 Last lines of `public/common.js`:
 
+     :
+     :
      },{}],"/robot.js":[function(require,module,exports){
      var uniq = require('uniq');
      module.exports = function wobot (s) { return uniq(s) };
