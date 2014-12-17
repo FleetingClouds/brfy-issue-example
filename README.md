@@ -18,13 +18,13 @@ Also look at the generated files: `public/boop.js`, `public/beep.js` and  `publi
 
 ![File Structure](https://raw.githubusercontent.com/FleetingClouds/brfy-issue-example/master/uml.png)
 
-Last line of `public/boop.js`:
-
-     },{"./robot.js":"/robot.js"}]},{},[1]);
-
-Last line of `public/beep.js`:
+Last line of `public/boop.js` which fails:
 
      },{"./robot.js":"/robot.js","uniq":"uniq"}]},{},[1]);
+
+Last line of `public/beep.js` which succeeds:
+
+     },{"./robot.js":"/robot.js"}]},{},[1]);
 
 Last lines of `public/common.js`:
 
