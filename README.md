@@ -1,9 +1,11 @@
 ## An example of Browserify not recognizing a module bundled by Browserify.
 
-I have been trying to see how to package up node modules in a bundle separate from my own bundle, but cannot understand why it will not work.
+I have been trying to see how to package up third-party modules in a bundle separate from my own bundle, but cannot understand why it will not work.
 
 To try it out :
 
+     git clone git@github.com:FleetingClouds/brfy-issue-example.git
+     cd brfy-issue-example
      npm run brfy
      
 To clean back to original state
@@ -12,7 +14,7 @@ To clean back to original state
 
 To see the problem, open the file  `public/index.html`  in a browser, and check the console.
 
-Also look at the generated file `public/boop.js`, `public/boop.js` and  `public/common.js`.
+Also look at the generated files: `public/boop.js`, `public/beep.js` and  `public/common.js`.
 
 ![File Structure](https://raw.githubusercontent.com/FleetingClouds/brfy-issue-example/master/uml.png)
 
@@ -32,4 +34,9 @@ Last lines of `public/common.js`:
      //
      },{"uniq":1}]},{},[]);
      
+Commands invoked :
+
+     browserify -r ./robot.js > public/common.js
+     browserify -x ./robot.js -x uniq beep.js > public/beep.js
+     browserify -x ./robot.js -x uniq boop.js > public/boop.js
 
