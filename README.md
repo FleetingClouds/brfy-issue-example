@@ -6,6 +6,8 @@ To try it out :
 
      git clone git@github.com:FleetingClouds/brfy-issue-example.git
      cd brfy-issue-example
+     npm uninstall -g browserify
+     npm   install -g browserify@7.0.2
      npm run brfy
      
 To clean back to original state
