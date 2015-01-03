@@ -18,8 +18,8 @@
     "clean-all": "npm run clean & npm run clean-tidy & npm run clean-pkgs",
     "brfy": "npm install && npm run brfy-common && npm run brfy-boop && npm run brfy-beep",
     "brfy-common": "browserify -r ./robot.js > public/common.js",
-    "brfy-boop": "browserify -x ./robot.js -x uniq beep.js > public/beep.js",
-    "brfy-beep": "browserify -x ./robot.js -x uniq boop.js > public/boop.js"
+    "brfy-boop": "browserify -x ./robot.js beep.js > public/beep.js",
+    "brfy-beep": "browserify -x ./robot.js boop.js > public/boop.js"
   },
   "private": true
 }
