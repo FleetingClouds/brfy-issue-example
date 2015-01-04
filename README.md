@@ -1,5 +1,11 @@
 ## An example of Browserify not recognizing a module bundled by Browserify.
 
+--------------
+
+**Update : 2015/01/04 - See [issue 1031 of Browserify] (https://github.com/substack/node-browserify/issues/1031) for a pull request and possible solution.** 
+
+-----------------
+
 I have been trying to see how to package up third-party modules in a bundle separate from my own bundle, but cannot understand why it will not work.
 
 To try it out :
